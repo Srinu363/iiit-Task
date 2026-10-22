@@ -1,0 +1,196 @@
+{
+  "model_version": "1.0.0",
+  "training_date": "2026-10-21T07:00:46.604851+00:00",
+  "feature_names": [
+    "laplacian_variance",
+    "tenengrad",
+    "fft_high_freq_ratio",
+    "luminance_mean",
+    "luminance_median",
+    "luminance_std",
+    "dark_clip_pct",
+    "bright_clip_pct",
+    "luminance_entropy",
+    "dynamic_range",
+    "luminance_skewness",
+    "immerkaer_noise",
+    "wavelet_noise",
+    "flat_patch_variance",
+    "rms_contrast",
+    "michelson_contrast",
+    "colorfulness",
+    "saturation_mean",
+    "saturation_std",
+    "blockiness",
+    "edge_density",
+    "spatial_entropy",
+    "lbp_uniformity"
+  ],
+  "num_features": 23,
+  "issue_types": [
+    "blur",
+    "underexposure",
+    "overexposure",
+    "noise",
+    "compression_artifact",
+    "low_contrast",
+    "corruption",
+    "potential_defect"
+  ],
+  "training_samples": 7056,
+  "validation_samples": 1512,
+  "test_samples": 1638,
+  "regressor_metrics": {
+    "train_mae": 4.739,
+    "train_rmse": 6.384
+  },
+  "classifier_metrics": {
+    "blur": {
+      "n_positive": 840,
+      "n_negative": 6216,
+      "scale_pos_weight": 7.4
+    },
+    "underexposure": {
+      "n_positive": 280,
+      "n_negative": 6776,
+      "scale_pos_weight": 24.2
+    },
+    "overexposure": {
+      "n_positive": 280,
+      "n_negative": 6776,
+      "scale_pos_weight": 24.2
+    },
+    "noise": {
+      "n_positive": 1120,
+      "n_negative": 5936,
+      "scale_pos_weight": 5.3
+    },
+    "compression_artifact": {
+      "n_positive": 560,
+      "n_negative": 6496,
+      "scale_pos_weight": 11.6
+    },
+    "low_contrast": {
+      "n_positive": 280,
+      "n_negative": 6776,
+      "scale_pos_weight": 24.2
+    },
+    "corruption": {
+      "n_positive": 280,
+      "n_negative": 6776,
+      "scale_pos_weight": 24.2
+    },
+    "potential_defect": {
+      "n_positive": 3360,
+      "n_negative": 3696,
+      "scale_pos_weight": 1.1
+    }
+  },
+  "anomaly_metrics": {
+    "n_clean_samples": 56,
+    "mean_clean_score": 0.11371420358027619,
+    "std_clean_score": 0.04878068945231282,
+    "min_clean_score": -0.018190426686889194
+  },
+  "calibration_metrics": {
+    "blur": {
+      "ece": 0.0
+    },
+    "underexposure": {
+      "ece": 0.0
+    },
+    "overexposure": {
+      "ece": 0.0
+    },
+    "noise": {
+      "ece": 0.0
+    },
+    "compression_artifact": {
+      "ece": 0.0
+    },
+    "low_contrast": {
+      "ece": 0.0
+    },
+    "corruption": {
+      "ece": 0.0
+    },
+    "potential_defect": {
+      "ece": 0.0
+    }
+  },
+  "baseline_metrics": {
+    "blur": {
+      "logistic_regression_acc": 0.8796,
+      "random_forest_acc": 0.9299
+    },
+    "underexposure": {
+      "logistic_regression_acc": 0.7189,
+      "random_forest_acc": 0.9623
+    },
+    "overexposure": {
+      "logistic_regression_acc": 0.8459,
+      "random_forest_acc": 0.9478
+    },
+    "noise": {
+      "logistic_regression_acc": 0.9511,
+      "random_forest_acc": 0.9425
+    },
+    "compression_artifact": {
+      "logistic_regression_acc": 0.7202,
+      "random_forest_acc": 0.9153
+    },
+    "low_contrast": {
+      "logistic_regression_acc": 0.709,
+      "random_forest_acc": 0.9299
+    },
+    "corruption": {
+      "logistic_regression_acc": 0.7017,
+      "random_forest_acc": 0.9603
+    },
+    "potential_defect": {
+      "logistic_regression_acc": 0.7407,
+      "random_forest_acc": 0.7765
+    }
+  },
+  "reference_stats": {
+    "laplacian_variance": 14531.407562503176,
+    "tenengrad": 18612.11237080892,
+    "fft_high_freq_ratio": 0.4895399569268606,
+    "luminance_mean": 115.53728230794269,
+    "luminance_median": 111.5,
+    "luminance_std": 53.0258769051451,
+    "dark_clip_pct": 0.0090662638346354,
+    "bright_clip_pct": 0.00216420491536455,
+    "luminance_entropy": 7.515501976013184,
+    "dynamic_range": 219.5,
+    "luminance_skewness": 0.21557354057738426,
+    "immerkaer_noise": 3.2516619421897754,
+    "wavelet_noise": 1.0746920136539369,
+    "flat_patch_variance": 29.94938268661499,
+    "rms_contrast": 53.0258769051451,
+    "michelson_contrast": 0.9072989851678376,
+    "colorfulness": 53.25471034463841,
+    "saturation_mean": 100.59432983398438,
+    "saturation_std": 57.06907285282384,
+    "blockiness": 1.4189157615835337,
+    "edge_density": 0.1363525390625,
+    "spatial_entropy": 4.619824745944751,
+    "lbp_uniformity": 0.12305740515391031
+  },
+  "training_time_seconds": 11.3,
+  "lgbm_params": {
+    "n_estimators": 500,
+    "learning_rate": 0.05,
+    "max_depth": 7,
+    "num_leaves": 63,
+    "min_child_samples": 20,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_alpha": 0.1,
+    "reg_lambda": 1.0,
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbose": -1
+  },
+  "random_seed": 42
+}

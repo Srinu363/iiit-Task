@@ -1,0 +1,292 @@
+{
+  "issue_classification": {
+    "blur": {
+      "precision": 0.9837,
+      "recall": 0.6205,
+      "f1": 0.761,
+      "accuracy": 0.9536,
+      "roc_auc": 0.9501,
+      "n_positive": 195,
+      "n_total": 1638
+    },
+    "underexposure": {
+      "precision": 0.1901,
+      "recall": 0.3538,
+      "f1": 0.2473,
+      "accuracy": 0.9145,
+      "roc_auc": 0.7789,
+      "n_positive": 65,
+      "n_total": 1638
+    },
+    "overexposure": {
+      "precision": 1.0,
+      "recall": 0.1385,
+      "f1": 0.2432,
+      "accuracy": 0.9658,
+      "roc_auc": 0.8534,
+      "n_positive": 65,
+      "n_total": 1638
+    },
+    "noise": {
+      "precision": 0.7897,
+      "recall": 0.8808,
+      "f1": 0.8327,
+      "accuracy": 0.9438,
+      "roc_auc": 0.9651,
+      "n_positive": 260,
+      "n_total": 1638
+    },
+    "compression_artifact": {
+      "precision": 1.0,
+      "recall": 0.1923,
+      "f1": 0.3226,
+      "accuracy": 0.9359,
+      "roc_auc": 0.9436,
+      "n_positive": 130,
+      "n_total": 1638
+    },
+    "low_contrast": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.9603,
+      "roc_auc": 0.8011,
+      "n_positive": 65,
+      "n_total": 1638
+    },
+    "corruption": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.9603,
+      "roc_auc": 0.7934,
+      "n_positive": 65,
+      "n_total": 1638
+    },
+    "potential_defect": {
+      "precision": 0.884,
+      "recall": 0.6936,
+      "f1": 0.7773,
+      "accuracy": 0.8107,
+      "roc_auc": 0.8967,
+      "n_positive": 780,
+      "n_total": 1638
+    }
+  },
+  "quality_regression": {
+    "mae": 16.698,
+    "rmse": 21.435,
+    "spearman_r": 0.6456,
+    "spearman_p": 0.0,
+    "label_accuracy": 0.5128
+  },
+  "anomaly_detection": {
+    "auroc": 0.6513,
+    "precision": 1.0,
+    "recall": 0.1428
+  },
+  "feature_importance": [
+    {
+      "feature": "colorfulness",
+      "importance": 1510.0
+    },
+    {
+      "feature": "lbp_uniformity",
+      "importance": 1449.0
+    },
+    {
+      "feature": "wavelet_noise",
+      "importance": 1410.0
+    },
+    {
+      "feature": "fft_high_freq_ratio",
+      "importance": 1376.0
+    },
+    {
+      "feature": "tenengrad",
+      "importance": 1199.0
+    },
+    {
+      "feature": "laplacian_variance",
+      "importance": 1199.0
+    },
+    {
+      "feature": "immerkaer_noise",
+      "importance": 1198.0
+    },
+    {
+      "feature": "blockiness",
+      "importance": 1094.0
+    },
+    {
+      "feature": "saturation_mean",
+      "importance": 1092.0
+    },
+    {
+      "feature": "saturation_std",
+      "importance": 1064.0
+    }
+  ],
+  "failure_cases": [
+    {
+      "filename": "I19_10_01.png",
+      "true_score": 75.0,
+      "pred_score": 15.49,
+      "error": 59.51,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "compression_artifact"
+    },
+    {
+      "filename": "I23_25_01.png",
+      "true_score": 80.75,
+      "pred_score": 22.54,
+      "error": 58.21,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "low_contrast"
+    },
+    {
+      "filename": "I29_10_01.png",
+      "true_score": 88.25,
+      "pred_score": 30.09,
+      "error": 58.16,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "compression_artifact"
+    },
+    {
+      "filename": "I19.png",
+      "true_score": 100.0,
+      "pred_score": 43.23,
+      "error": 56.77,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "clean"
+    },
+    {
+      "filename": "I05.png",
+      "true_score": 100.0,
+      "pred_score": 43.78,
+      "error": 56.22,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "clean"
+    },
+    {
+      "filename": "I34.png",
+      "true_score": 100.0,
+      "pred_score": 44.17,
+      "error": 55.83,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "clean"
+    },
+    {
+      "filename": "I19_10_02.png",
+      "true_score": 71.75,
+      "pred_score": 16.06,
+      "error": 55.69,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "compression_artifact"
+    },
+    {
+      "filename": "I13_23_05.png",
+      "true_score": 20.0,
+      "pred_score": 75.64,
+      "error": 55.64,
+      "true_label": "DEFECTIVE",
+      "issue_type": "corruption"
+    },
+    {
+      "filename": "I23.png",
+      "true_score": 100.0,
+      "pred_score": 44.85,
+      "error": 55.15,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "clean"
+    },
+    {
+      "filename": "I23_08_02.png",
+      "true_score": 64.25,
+      "pred_score": 9.57,
+      "error": 54.68,
+      "true_label": "DEGRADED",
+      "issue_type": "potential_defect"
+    },
+    {
+      "filename": "I19_09_03.png",
+      "true_score": 83.25,
+      "pred_score": 29.3,
+      "error": 53.95,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "compression_artifact"
+    },
+    {
+      "filename": "I29_02_01.png",
+      "true_score": 80.0,
+      "pred_score": 26.15,
+      "error": 53.85,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "blur"
+    },
+    {
+      "filename": "I19_08_01.png",
+      "true_score": 96.75,
+      "pred_score": 43.23,
+      "error": 53.52,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "potential_defect"
+    },
+    {
+      "filename": "I23_03_01.png",
+      "true_score": 98.25,
+      "pred_score": 44.85,
+      "error": 53.4,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "blur"
+    },
+    {
+      "filename": "I68.png",
+      "true_score": 100.0,
+      "pred_score": 47.16,
+      "error": 52.84,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "clean"
+    },
+    {
+      "filename": "I23_19_01.png",
+      "true_score": 90.0,
+      "pred_score": 37.67,
+      "error": 52.33,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "potential_defect"
+    },
+    {
+      "filename": "I23_24_01.png",
+      "true_score": 82.5,
+      "pred_score": 30.36,
+      "error": 52.14,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "potential_defect"
+    },
+    {
+      "filename": "I23_04_01.png",
+      "true_score": 95.0,
+      "pred_score": 43.01,
+      "error": 51.99,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "potential_defect"
+    },
+    {
+      "filename": "I19_09_01.png",
+      "true_score": 90.75,
+      "pred_score": 38.9,
+      "error": 51.85,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "compression_artifact"
+    },
+    {
+      "filename": "I23_16_01.png",
+      "true_score": 93.25,
+      "pred_score": 41.57,
+      "error": 51.68,
+      "true_label": "ACCEPTABLE",
+      "issue_type": "overexposure"
+    }
+  ]
+}

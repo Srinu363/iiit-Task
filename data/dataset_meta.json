@@ -1,0 +1,32 @@
+{
+  "num_images": 10206,
+  "num_features": 23,
+  "feature_names": [
+    "laplacian_variance",
+    "tenengrad",
+    "fft_high_freq_ratio",
+    "luminance_mean",
+    "luminance_median",
+    "luminance_std",
+    "dark_clip_pct",
+    "bright_clip_pct",
+    "luminance_entropy",
+    "dynamic_range",
+    "luminance_skewness",
+    "immerkaer_noise",
+    "wavelet_noise",
+    "flat_patch_variance",
+    "rms_contrast",
+    "michelson_contrast",
+    "colorfulness",
+    "saturation_mean",
+    "saturation_std",
+    "blockiness",
+    "edge_density",
+    "spatial_entropy",
+    "lbp_uniformity"
+  ],
+  "num_errors": 0,
+  "data_hash": "f2c0e410a1d36c82",
+  "elapsed_seconds": 1522.5
+}
