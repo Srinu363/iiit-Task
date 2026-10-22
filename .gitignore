@@ -13,8 +13,6 @@ venv/
 env/
 .pytest_cache/
 
-# Large raw dataset
-kadid10k/
 
 # Uploads
 uploads/
